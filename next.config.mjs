@@ -4,6 +4,9 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  images: {
+    domains: ["ddg0cip9uom1w.cloudfront.net"],
+  },
 };
 
 export default nextConfig;

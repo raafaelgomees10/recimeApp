@@ -8,11 +8,13 @@ export const GlobalStyles = createGlobalStyle`
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	color: #000;
+	color: #4e2f00;
+	background-color: #FFF9E9;
 }
 
-html,
-body {
-
+.mainContainer{
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
 }
 `;
