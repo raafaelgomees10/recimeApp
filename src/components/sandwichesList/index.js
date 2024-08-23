@@ -1,10 +1,13 @@
 import Cards from "../cards";
+import ModalSandwiche from "../modalSandwiche";
 import * as S from "./styles";
 import React, { useState } from "react";
 
 const SandwichesList = ({ recipes }) => {
-  const [selectedDifficulty, setSelectedDifficulty] = useState("easy");
   const [isFirstRender, setIsFirstRender] = useState(true);
+  const [modalSandwiche, setModalSandwiche] = useState(false);
+  const [selectedSandwiche, setSelectedSandwiche] = useState(null);
+  const [selectedDifficulty, setSelectedDifficulty] = useState("easy");
 
   const handleFilterChange = (difficulty) => {
     setIsFirstRender(false);
@@ -25,6 +28,11 @@ const SandwichesList = ({ recipes }) => {
     }
     return a.position - b.position;
   });
+
+  const handleClick = (recipe) => {
+    setSelectedSandwiche(recipe);
+    setModalSandwiche(true);
+  };
 
   return (
     <S.Container>
@@ -56,7 +64,10 @@ const SandwichesList = ({ recipes }) => {
 
       <S.CardGroup>
         {sortedRecipes?.map((recipe, index) => (
-          <li key={`${recipe.id}-${selectedDifficulty}-${index}`}>
+          <li
+            onClick={() => handleClick(recipe)}
+            key={`${recipe.id}-${selectedDifficulty}-${index}`}
+          >
             <Cards
               index={index}
               recipe={recipe}
@@ -66,6 +77,13 @@ const SandwichesList = ({ recipes }) => {
           </li>
         ))}
       </S.CardGroup>
+      {modalSandwiche && (
+        <ModalSandwiche
+          sandwiche={selectedSandwiche}
+          modalSandwiche={modalSandwiche}
+          setModalSandwiche={setModalSandwiche}
+        />
+      )}
     </S.Container>
   );
 };
