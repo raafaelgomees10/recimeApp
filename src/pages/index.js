@@ -1,9 +1,9 @@
-import Header from "@/components/header";
-import SandwichesList from "@/components/sandwichesList";
 import Head from "next/head";
 import { promises as fs } from "fs";
+import Header from "@/components/header";
 import { useEffect, useState } from "react";
 import Loading from "@/components/loading/loading";
+import SandwichesList from "@/components/sandwichesList";
 
 export async function getStaticProps() {
   const file = await fs.readFile(

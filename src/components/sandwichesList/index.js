@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import * as S from "./styles";
 import Cards from "../cards";
+import * as S from "./styles";
+import React, { useState } from "react";
 
 const SandwichesList = ({ recipes }) => {
   const [selectedDifficulty, setSelectedDifficulty] = useState("easy");
