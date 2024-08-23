@@ -16,5 +16,13 @@ export const GlobalStyles = createGlobalStyle`
   margin: 0 auto;
   max-width: 1200px;
   width: 100%;
+
+  @media (max-width: 767px) {
+  max-width: 340px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+  max-width: 735px;
+  }
 }
 `;

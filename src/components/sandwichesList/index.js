@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./styles";
 import Cards from "../cards";
+import Loading from "../loading/loading";
 
 const SandwichesList = ({ recipes }) => {
   const [selectedDifficulty, setSelectedDifficulty] = useState("easy");
@@ -27,7 +28,7 @@ const SandwichesList = ({ recipes }) => {
   return (
     <S.Container>
       <S.Title>Trending Recipes</S.Title>
-      <S.Level>Medium</S.Level>
+      <S.Level>{selectedDifficulty}</S.Level>
       <S.Text>You can filter recipes by difficulty.</S.Text>
 
       <S.ButtonGroup>

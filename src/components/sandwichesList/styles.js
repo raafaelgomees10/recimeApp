@@ -15,6 +15,7 @@ export const Level = styled.div`
   font-size: 1.6rem;
   margin: 12px 0 0;
   font-weight: 600;
+  text-transform: capitalize;
 `;
 
 export const Text = styled.span`
@@ -38,7 +39,7 @@ export const Buttons = styled.button`
   cursor: pointer;
 
   &:first-child {
-    border-left-width: 2px;
+    border-width: 2px;
     border-radius: 8px 0 0 8px;
   }
 
@@ -58,4 +59,12 @@ export const CardGroup = styled.ul`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px 16px;
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 `;
