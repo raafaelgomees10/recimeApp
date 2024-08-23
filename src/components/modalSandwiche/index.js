@@ -6,7 +6,6 @@ const ModalSandwiche = ({ setModalSandwiche, sandwiche }) => {
     setModalSandwiche(false);
   };
 
-  console.log(sandwiche);
   return (
     <>
       <S.Container id="modalContainer">

@@ -18,9 +18,10 @@ export const Card = styled.div`
   border: 1px solid
     ${(props) =>
       props.$isSelected
-        ? props.theme.fontColor.secondary
-        : props.theme.fontColor.primary};
+        ? props.theme.colors.secondary
+        : props.theme.colors.primary};
   border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   opacity: 0;
   overflow: hidden;
@@ -56,12 +57,12 @@ export const Title = styled.div`
   ${(props) =>
     props.$isSelected &&
     css`
-      color: ${(props) => props.theme.fontColor.secondary};
+      color: ${(props) => props.theme.colors.secondary};
     `};
 `;
 
 export const Level = styled.div`
-  color: ${(props) => props.theme.fontColor.gray};
+  color: ${(props) => props.theme.colors.gray};
   font-size: 1.2rem;
   text-transform: capitalize;
 `;

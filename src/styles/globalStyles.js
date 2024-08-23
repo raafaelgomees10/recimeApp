@@ -2,9 +2,9 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle` 
 * {
-	background-color: #FFF9E9;
+	background-color: ${(props) => props.theme.colors.bg};
 	box-sizing: border-box;
-	color: ${(props) => props.theme.fontColor.primary};
+	color: ${(props) => props.theme.colors.primary};
 	font-family: "Poppins", sans-serif;
 	font-size: 62.5%;
 	list-style: none;

@@ -45,7 +45,7 @@ export const Container = styled.div`
 `;
 
 export const Modal = styled.div`
-  background-color: #fff9e9;
+  background-color: ${(props) => props.theme.colors.bg};
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   max-width: 90%;
@@ -77,7 +77,7 @@ export const Img = styled(Image)`
   object-fit: cover;
 
   @media (max-width: 768px) {
-    max-height: 50vh;
+    max-height: 45vh;
     max-width: 100%;
   }
 `;
@@ -107,6 +107,10 @@ export const Text = styled.p`
 export const ButtonWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
+
+  @media (max-width: 768px) {
+    padding-top: 24px;
+  }
 `;
 
 export const Button = styled.button`

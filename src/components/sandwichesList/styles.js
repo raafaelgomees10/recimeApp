@@ -39,7 +39,7 @@ export const ButtonGroup = styled.div`
 
 export const Buttons = styled.button`
   background: transparent;
-  border: 2px solid ${(props) => props.theme.fontColor.darkGray};
+  border: 2px solid ${(props) => props.theme.colors.darkGray};
   border-left-width: 0;
   cursor: pointer;
   font-size: 1.4rem;
@@ -57,8 +57,8 @@ export const Buttons = styled.button`
   ${(props) =>
     props.$isSelected &&
     css`
-      border-color: ${(props) => props.theme.fontColor.secondary};
-      color: ${(props) => props.theme.fontColor.secondary};
+      border-color: ${(props) => props.theme.colors.secondary};
+      color: ${(props) => props.theme.colors.secondary};
     `}
 `;
 
