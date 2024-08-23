@@ -12,10 +12,10 @@ const ModalSandwiche = ({ setModalSandwiche, sandwiche }) => {
         <S.Modal className="modal">
           <S.Content>
             <S.Img
-              src={sandwiche.imageUrl}
-              alt="Imagem"
               width={300}
               height={250}
+              src={sandwiche.imageUrl}
+              alt={`${sandwiche.title} photo`}
             />
             <S.Details className="modal-content">
               <div>

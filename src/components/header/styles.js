@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-  align-items: center;
   display: flex;
   justify-content: center;
   padding: 16px;
@@ -9,9 +8,14 @@ export const Container = styled.header`
 `;
 
 export const Content = styled.div`
-  font-size: 3.2rem;
-  font-weight: 600;
-  max-width: 1200px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
   margin: 0 auto;
   width: 100%;
+  > p {
+    font-size: 3.2rem;
+    font-weight: 600;
+  }
 `;

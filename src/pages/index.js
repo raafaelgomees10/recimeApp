@@ -1,5 +1,6 @@
 import { promises as fs } from "fs";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 import Meta from "@/components/meta/meta";
 import { useEffect, useState } from "react";
 import Loading from "@/components/loading/loading";
@@ -46,6 +47,7 @@ export default function Home({ recipes }) {
           <main className="mainContainer">
             <SandwichesList recipes={recipes} />
           </main>
+          <Footer />
         </>
       )}
     </>

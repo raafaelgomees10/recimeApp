@@ -9,6 +9,7 @@ const Cards = ({ recipe, selectedDifficulty, isFirstRender, index }) => {
   return (
     <S.Card $isSelected={isSelected} $delay={delay}>
       <S.Img
+        priority
         width={140}
         height={150}
         src={recipe.imageUrl}

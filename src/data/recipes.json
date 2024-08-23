@@ -19,7 +19,7 @@
       "id": 3,
       "title": "Chicken Burger",
       "description": "A crispy chicken burger with lettuce and mayonnaise.",
-      "position": 3,
+      "position": 4,
       "imageUrl": "https://ddg0cip9uom1w.cloudfront.net/code-challenge/burger.jpg",
       "difficulty": "hard"
     },
@@ -27,7 +27,7 @@
       "id": 4,
       "title": "Beef Burger",
       "description": "A classic beef burger with cheddar cheese and BBQ sauce.",
-      "position": 4,
+      "position": 3,
       "imageUrl": "https://ddg0cip9uom1w.cloudfront.net/code-challenge/burger.jpg",
       "difficulty": "hard"
     },
@@ -35,7 +35,7 @@
       "id": 5,
       "title": "Classic Burger",
       "description": "A delicious classic burger with lettuce, tomato, and cheese.",
-      "position": 5,
+      "position": 8,
       "imageUrl": "https://ddg0cip9uom1w.cloudfront.net/code-challenge/burger.jpg",
       "difficulty": "easy"
     },
@@ -43,7 +43,7 @@
       "id": 6,
       "title": "Bacon Burguer",
       "description": "A burger topped with crispy bacon and BBQ sauce.",
-      "position": 6,
+      "position": 5,
       "imageUrl": "https://ddg0cip9uom1w.cloudfront.net/code-challenge/burger.jpg",
       "difficulty": "easy"
     },
@@ -51,7 +51,7 @@
       "id": 7,
       "title": "Cheese Burger",
       "description": "A cheesy delight with a thick slice of cheddar.",
-      "position": 7,
+      "position": 6,
       "imageUrl": "https://ddg0cip9uom1w.cloudfront.net/code-challenge/burger.jpg",
       "difficulty": "easy"
     },
@@ -59,7 +59,7 @@
       "id": 8,
       "title": "Cheddar Burger",
       "description": "A double-stacked burger with two beef patties and melted cheese.",
-      "position": 8,
+      "position": 7,
       "imageUrl": "https://ddg0cip9uom1w.cloudfront.net/code-challenge/burger.jpg",
       "difficulty": "easy"
     }
