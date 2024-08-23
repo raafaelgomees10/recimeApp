@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -39,12 +39,19 @@ export const Buttons = styled.button`
 
   &:first-child {
     border-left-width: 2px;
-    border-radius: 20px 0 0 20px;
+    border-radius: 8px 0 0 8px;
   }
 
   &:last-child {
-    border-radius: 0 20px 20px 0;
+    border-radius: 0 8px 8px 0;
   }
+
+  ${(props) =>
+    props.$isSelected &&
+    css`
+      border-color: ${(props) => props.theme.fontColor.secondary};
+      color: ${(props) => props.theme.fontColor.secondary};
+    `}
 `;
 
 export const CardGroup = styled.ul`

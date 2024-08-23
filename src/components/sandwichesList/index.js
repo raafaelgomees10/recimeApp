@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import * as S from "./styles";
 import Cards from "../cards";
 
-const SandwichesList = () => {
+const SandwichesList = ({ recipes }) => {
+  const [selectedDifficulty, setSelectedDifficulty] = useState("easy");
+
+  const handleFilterChange = (difficulty) => {
+    setSelectedDifficulty(difficulty);
+  };
+
+  const sortedRecipes = recipes.sort((a, b) => {
+    if (
+      a.difficulty === selectedDifficulty &&
+      b.difficulty !== selectedDifficulty
+    ) {
+      return -1;
+    } else if (
+      a.difficulty !== selectedDifficulty &&
+      b.difficulty === selectedDifficulty
+    ) {
+      return 1;
+    }
+    return a.position - b.position;
+  });
+
   return (
     <S.Container>
       <S.Title>Trending Recipes</S.Title>
@@ -10,36 +31,32 @@ const SandwichesList = () => {
       <S.Text>You can filter recipes by difficulty.</S.Text>
 
       <S.ButtonGroup>
-        <S.Buttons>Easy</S.Buttons>
-        <S.Buttons>Medium</S.Buttons>
-        <S.Buttons>Difficulty</S.Buttons>
+        <S.Buttons
+          $isSelected={selectedDifficulty === "easy"}
+          onClick={() => handleFilterChange("easy")}
+        >
+          Easy
+        </S.Buttons>
+        <S.Buttons
+          $isSelected={selectedDifficulty === "medium"}
+          onClick={() => handleFilterChange("medium")}
+        >
+          Medium
+        </S.Buttons>
+        <S.Buttons
+          $isSelected={selectedDifficulty === "hard"}
+          onClick={() => handleFilterChange("hard")}
+        >
+          Hard
+        </S.Buttons>
       </S.ButtonGroup>
 
       <S.CardGroup>
-        <li>
-          <Cards />
-        </li>
-        <li>
-          <Cards />
-        </li>
-        <li>
-          <Cards />
-        </li>
-        <li>
-          <Cards />
-        </li>
-        <li>
-          <Cards />
-        </li>
-        <li>
-          <Cards />
-        </li>
-        <li>
-          <Cards />
-        </li>
-        <li>
-          <Cards />
-        </li>
+        {sortedRecipes?.map((recipe) => (
+          <li key={recipe.id}>
+            <Cards recipe={recipe} selectedDifficulty={selectedDifficulty} />
+          </li>
+        ))}
       </S.CardGroup>
     </S.Container>
   );

@@ -8,7 +8,7 @@ export const GlobalStyles = createGlobalStyle`
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	color: #4e2f00;
+	color: ${(props) => props.theme.fontColor.primary};
 	background-color: #FFF9E9;
 }
 

@@ -2,18 +2,20 @@ import React from "react";
 import * as S from "./styles";
 import Image from "next/image";
 
-const Cards = () => {
+const Cards = ({ recipe, selectedDifficulty }) => {
+  const isSelected = selectedDifficulty === recipe.difficulty;
+
   return (
-    <S.Card>
+    <S.Card $isSelected={isSelected}>
       <Image
-        width={120}
-        height={140}
-        src="https://ddg0cip9uom1w.cloudfront.net/code-challenge/burger.jpg"
-        alt={`Name`}
+        width={140}
+        height={150}
+        src={recipe.imageUrl}
+        alt={`${recipe.title} photo`}
       />
       <S.Details>
-        <S.Title></S.Title>
-        <S.Level></S.Level>
+        <S.Title $isSelected={isSelected}>{recipe.title}</S.Title>
+        <S.Level>{recipe.difficulty}</S.Level>
       </S.Details>
     </S.Card>
   );

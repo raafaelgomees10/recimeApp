@@ -1,8 +1,22 @@
 import Header from "@/components/header";
 import SandwichesList from "@/components/sandwichesList";
 import Head from "next/head";
+import { promises as fs } from "fs";
 
-export default function Home() {
+export async function getStaticProps() {
+  const file = await fs.readFile(
+    process.cwd() + "/src/data/recipes.json",
+    "utf8"
+  );
+  const data = JSON.parse(file);
+  return {
+    props: {
+      recipes: data,
+    },
+  };
+}
+
+export default function Home({ recipes }) {
   return (
     <>
       <Head>
@@ -14,7 +28,7 @@ export default function Home() {
 
       <Header />
       <main className="mainContainer">
-        <SandwichesList />
+        <SandwichesList recipes={recipes} />
       </main>
     </>
   );

@@ -5,7 +5,7 @@ export const Container = styled.header`
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 32px;
+  padding: 16px;
 `;
 
 export const Content = styled.div`
