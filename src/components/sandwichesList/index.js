@@ -1,16 +1,27 @@
 import Cards from "../cards";
-import ModalSandwiche from "../modalSandwiche";
 import * as S from "./styles";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import ModalSandwiche from "../modalSandwiche";
 
 const SandwichesList = ({ recipes }) => {
   const [isFirstRender, setIsFirstRender] = useState(true);
   const [modalSandwiche, setModalSandwiche] = useState(false);
   const [selectedSandwiche, setSelectedSandwiche] = useState(null);
-  const [selectedDifficulty, setSelectedDifficulty] = useState("easy");
+  const [selectedDifficulty, setSelectedDifficulty] = useState("");
+
+  useEffect(() => {
+    const localSelectedDifficulty = localStorage.getItem("recime:difficulty");
+
+    if (localSelectedDifficulty) {
+      setSelectedDifficulty(localSelectedDifficulty);
+    }
+  }, [selectedDifficulty]);
 
   const handleFilterChange = (difficulty) => {
     setIsFirstRender(false);
+
+    localStorage.setItem("recime:difficulty", difficulty);
+
     setSelectedDifficulty(difficulty);
   };
 
@@ -40,6 +51,7 @@ const SandwichesList = ({ recipes }) => {
         <S.Title>Trending Recipes</S.Title>
         <S.Level>{selectedDifficulty}</S.Level>
         <S.Text>You can filter recipes by difficulty.</S.Text>
+
         <S.ButtonGroup>
           <S.Buttons
             $isSelected={selectedDifficulty === "easy"}
