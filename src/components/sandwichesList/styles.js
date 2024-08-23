@@ -1,10 +1,17 @@
 import styled, { css } from "styled-components";
 
 export const Container = styled.div`
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+`;
+
+export const Content = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export const Title = styled.h2`
@@ -13,34 +20,34 @@ export const Title = styled.h2`
 
 export const Level = styled.div`
   font-size: 1.6rem;
-  margin: 12px 0 0;
   font-weight: 600;
+  margin: 12px 0 0;
   text-transform: capitalize;
 `;
 
 export const Text = styled.span`
-  font-size: 1.4rem;
   display: block;
+  font-size: 1.4rem;
 `;
 
 export const ButtonGroup = styled.div`
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
   margin: 24px 0 32px;
 `;
 
 export const Buttons = styled.button`
-  font-size: 1.4rem;
   background: transparent;
   border: 2px solid ${(props) => props.theme.fontColor.darkGray};
   border-left-width: 0;
-  padding: 8px 16px;
   cursor: pointer;
+  font-size: 1.4rem;
+  padding: 8px 16px;
 
   &:first-child {
-    border-width: 2px;
     border-radius: 8px 0 0 8px;
+    border-width: 2px;
   }
 
   &:last-child {

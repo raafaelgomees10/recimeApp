@@ -40,34 +40,33 @@ const Pulse = keyframes`
 `;
 
 const Container = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
   height: 100vh;
+  justify-content: center;
+  width: 100%;
 `;
 
 const SVG = styled.svg`
+  animation: ${Pulse} 0.8s linear 2.9s forwards;
   transform-origin: center;
 
-  animation: ${Pulse} 0.8s linear 2.9s forwards;
-
   .svg-elem-1 {
-    stroke-dashoffset: 530px;
-    stroke-dasharray: 530px;
     animation: ${strokeAnimation1} 2.5s ease-in-out forwards;
+    stroke-dasharray: 530px;
+    stroke-dashoffset: 530px;
   }
 
   .svg-elem-2 {
-    stroke-dashoffset: 113px;
-    stroke-dasharray: 113px;
     animation: ${strokeAnimation2} 2.5s ease-in-out 0.22s forwards;
+    stroke-dasharray: 113px;
+    stroke-dashoffset: 113px;
   }
 
   .svg-elem-3 {
-    stroke-dashoffset: 118px;
-    stroke-dasharray: 118px;
     animation: ${strokeAnimation3} 2.5s ease-in-out 0.44s forwards;
+    stroke-dasharray: 118px;
+    stroke-dashoffset: 118px;
   }
 `;
 

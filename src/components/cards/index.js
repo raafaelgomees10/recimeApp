@@ -1,10 +1,10 @@
 import React from "react";
 import * as S from "./styles";
 
-const Cards = ({ recipe, selectedDifficulty, index }) => {
+const Cards = ({ recipe, selectedDifficulty, isFirstRender, index }) => {
   const isSelected = selectedDifficulty === recipe.difficulty;
   // 1100 is the time to make animation of the header title and buttons
-  const delay = 1100 + index * 200 + "ms";
+  const delay = isFirstRender ? 1100 + index * 200 + "ms" : index * 200 + "ms";
 
   return (
     <S.Card $isSelected={isSelected} $delay={delay}>

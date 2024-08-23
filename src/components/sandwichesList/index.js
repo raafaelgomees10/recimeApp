@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import * as S from "./styles";
 import Cards from "../cards";
-import Loading from "../loading/loading";
 
 const SandwichesList = ({ recipes }) => {
   const [selectedDifficulty, setSelectedDifficulty] = useState("easy");
+  const [isFirstRender, setIsFirstRender] = useState(true);
 
   const handleFilterChange = (difficulty) => {
+    setIsFirstRender(false);
     setSelectedDifficulty(difficulty);
   };
 
@@ -27,7 +28,7 @@ const SandwichesList = ({ recipes }) => {
 
   return (
     <S.Container>
-      <div className="fadeUp">
+      <S.Content className="fadeUp">
         <S.Title>Trending Recipes</S.Title>
         <S.Level>{selectedDifficulty}</S.Level>
         <S.Text>You can filter recipes by difficulty.</S.Text>
@@ -51,14 +52,15 @@ const SandwichesList = ({ recipes }) => {
             Hard
           </S.Buttons>
         </S.ButtonGroup>
-      </div>
+      </S.Content>
 
       <S.CardGroup>
         {sortedRecipes?.map((recipe, index) => (
-          <li key={recipe.id}>
+          <li key={`${recipe.id}-${selectedDifficulty}-${index}`}>
             <Cards
-              recipe={recipe}
               index={index}
+              recipe={recipe}
+              isFirstRender={isFirstRender}
               selectedDifficulty={selectedDifficulty}
             />
           </li>
