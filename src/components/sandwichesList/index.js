@@ -27,35 +27,40 @@ const SandwichesList = ({ recipes }) => {
 
   return (
     <S.Container>
-      <S.Title>Trending Recipes</S.Title>
-      <S.Level>{selectedDifficulty}</S.Level>
-      <S.Text>You can filter recipes by difficulty.</S.Text>
-
-      <S.ButtonGroup>
-        <S.Buttons
-          $isSelected={selectedDifficulty === "easy"}
-          onClick={() => handleFilterChange("easy")}
-        >
-          Easy
-        </S.Buttons>
-        <S.Buttons
-          $isSelected={selectedDifficulty === "medium"}
-          onClick={() => handleFilterChange("medium")}
-        >
-          Medium
-        </S.Buttons>
-        <S.Buttons
-          $isSelected={selectedDifficulty === "hard"}
-          onClick={() => handleFilterChange("hard")}
-        >
-          Hard
-        </S.Buttons>
-      </S.ButtonGroup>
+      <div className="fadeUp">
+        <S.Title>Trending Recipes</S.Title>
+        <S.Level>{selectedDifficulty}</S.Level>
+        <S.Text>You can filter recipes by difficulty.</S.Text>
+        <S.ButtonGroup>
+          <S.Buttons
+            $isSelected={selectedDifficulty === "easy"}
+            onClick={() => handleFilterChange("easy")}
+          >
+            Easy
+          </S.Buttons>
+          <S.Buttons
+            $isSelected={selectedDifficulty === "medium"}
+            onClick={() => handleFilterChange("medium")}
+          >
+            Medium
+          </S.Buttons>
+          <S.Buttons
+            $isSelected={selectedDifficulty === "hard"}
+            onClick={() => handleFilterChange("hard")}
+          >
+            Hard
+          </S.Buttons>
+        </S.ButtonGroup>
+      </div>
 
       <S.CardGroup>
-        {sortedRecipes?.map((recipe) => (
+        {sortedRecipes?.map((recipe, index) => (
           <li key={recipe.id}>
-            <Cards recipe={recipe} selectedDifficulty={selectedDifficulty} />
+            <Cards
+              recipe={recipe}
+              index={index}
+              selectedDifficulty={selectedDifficulty}
+            />
           </li>
         ))}
       </S.CardGroup>

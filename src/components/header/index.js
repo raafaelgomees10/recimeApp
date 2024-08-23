@@ -4,7 +4,7 @@ import * as S from "./styles";
 const Header = () => {
   return (
     <S.Container>
-      <S.Content>Recipes</S.Content>
+      <S.Content className="fadeLeft">Recipes</S.Content>
     </S.Container>
   );
 };

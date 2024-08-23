@@ -2,11 +2,13 @@ import React from "react";
 import * as S from "./styles";
 import Image from "next/image";
 
-const Cards = ({ recipe, selectedDifficulty }) => {
+const Cards = ({ recipe, selectedDifficulty, index }) => {
   const isSelected = selectedDifficulty === recipe.difficulty;
+  // 1100 is the time to make animation of the header title and buttons
+  const delay = 1100 + index * 200 + "ms";
 
   return (
-    <S.Card $isSelected={isSelected}>
+    <S.Card $isSelected={isSelected} $delay={delay}>
       <Image
         width={140}
         height={150}
