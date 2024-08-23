@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styled, { css, keyframes } from "styled-components";
 
 const fadeDown = keyframes`
@@ -20,13 +21,27 @@ export const Card = styled.div`
         ? props.theme.fontColor.secondary
         : props.theme.fontColor.primary};
   border-radius: 16px;
+  cursor: pointer;
   opacity: 0;
+  overflow: hidden;
   padding-bottom: 12px;
+  position: relative;
+  transition: scale 0.5s ease-out;
 
-  > img {
-    border-top-right-radius: 16px;
-    border-top-left-radius: 16px;
-    margin-top: -1px;
+  &:hover {
+    scale: 1.1;
+  }
+`;
+
+export const Img = styled(Image)`
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+  margin-top: -1px;
+  object-fit: cover;
+  transition: 0.4s all ease-in-out;
+
+  ${Card}:hover & {
+    transform: scale(1.07);
   }
 `;
 
@@ -46,7 +61,7 @@ export const Title = styled.div`
 `;
 
 export const Level = styled.div`
-  color: #c5c5c5;
+  color: ${(props) => props.theme.fontColor.gray};
   font-size: 1.2rem;
   text-transform: capitalize;
 `;

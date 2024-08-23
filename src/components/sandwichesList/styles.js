@@ -33,7 +33,7 @@ export const ButtonGroup = styled.div`
 export const Buttons = styled.button`
   font-size: 1.4rem;
   background: transparent;
-  border: 2px solid #7f8c8d;
+  border: 2px solid ${(props) => props.theme.fontColor.darkGray};
   border-left-width: 0;
   padding: 8px 16px;
   cursor: pointer;

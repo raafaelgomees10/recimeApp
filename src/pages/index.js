@@ -2,6 +2,8 @@ import Header from "@/components/header";
 import SandwichesList from "@/components/sandwichesList";
 import Head from "next/head";
 import { promises as fs } from "fs";
+import { useEffect, useState } from "react";
+import Loading from "@/components/loading/loading";
 
 export async function getStaticProps() {
   const file = await fs.readFile(
@@ -17,6 +19,16 @@ export async function getStaticProps() {
 }
 
 export default function Home({ recipes }) {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <Head>
@@ -26,10 +38,16 @@ export default function Home({ recipes }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
-      <main className="mainContainer">
-        <SandwichesList recipes={recipes} />
-      </main>
+      {loading ? (
+        <Loading />
+      ) : (
+        <>
+          <Header />
+          <main className="mainContainer">
+            <SandwichesList recipes={recipes} />
+          </main>
+        </>
+      )}
     </>
   );
 }

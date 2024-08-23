@@ -1,6 +1,5 @@
 import React from "react";
 import * as S from "./styles";
-import Image from "next/image";
 
 const Cards = ({ recipe, selectedDifficulty, index }) => {
   const isSelected = selectedDifficulty === recipe.difficulty;
@@ -9,7 +8,7 @@ const Cards = ({ recipe, selectedDifficulty, index }) => {
 
   return (
     <S.Card $isSelected={isSelected} $delay={delay}>
-      <Image
+      <S.Img
         width={140}
         height={150}
         src={recipe.imageUrl}
