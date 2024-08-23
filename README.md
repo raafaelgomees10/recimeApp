@@ -1,4 +1,10 @@
-# :man_cook: Recime Test Project :woman_cook:
+<p align="center">
+<br>
+  <img src="public/logo.svg" alt="GoBarber" width="250">
+<br>
+</p>
+
+<h1 align="center">  :man_cook: Recime Test Project :woman_cook:</h1>
 
 ### Overview
 
