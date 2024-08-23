@@ -1,40 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# :man_cook: Recime Test Project :woman_cook:
 
-## Getting Started
+### Overview
 
-First, run the development server:
+This project is a web application built with Next.js to display a list of trending recipes, allowing users to filter these recipes by difficulty. The application is designed to be responsive and user-friendly, with various features to enhance the user experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+You can view the application through this link - [deploy ReciMe Test by Rafael](https://recime-rafael.netlify.app)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## :technologist: Features
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- **Animated Loading Screen:** Before rendering the components, an animated loading screen is displayed to improve the visual appeal of the application.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- **Data Fetch Simulation:** The data for the recipes is retrieved from a local JSON file, simulating an API request using getStaticProps to pre-fetch the data.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- **SEO Optimization:** A meta component is created to optimize the application's SEO, ensuring better visibility on search engines.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Styled Components:** The entire application uses styled-components for theming and global styles, providing a consistent look and feel across all devices.
 
-## Learn More
+- **Component Animations:** Various animations are implemented to enhance the rendering of components, making transitions smooth and visually appealing.
 
-To learn more about Next.js, take a look at the following resources:
+- **Responsive Design:** The application is fully responsive, ensuring a seamless experience on PCs, tablets, and mobile devices.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Sorting and Filtering:** Users can sort the recipe list by difficulty and by priority. The selected difficulty is stored in local storage, allowing the application to remember the user's last chosen setting on subsequent visits.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Recipe Modal:** A modal with detailed information about each recipe is available, providing users with more context on their chosen dishes.
 
-## Deploy on Vercel
+## Installation and Setup
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To run this project locally:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Clone the repository:
+   `git clone https://github.com/raafaelgomees10/recimeApp.git`
+
+2. Navigate to the project directory:
+   `cd recime-test`
+
+3. Install the dependencies:
+   `npm install or yarn install`
+
+4. Start the development server:
+   `npm run dev or yarn dev`
+
+## Contact
+
+Take a look at my [portfolio](https://rafaelgomes.netlify.app?utm_source=github&utm_medium=readme_project&utm_campaign=recimeApp).
+
+<a href="https://www.linkedin.com/in/dev-rafael-gomes/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg" width="30" heigth="30" alt="Rafael-linkedn"></a>
+<a href="https://www.facebook.com/rafael.gomes.961pl/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/facebook/facebook-original.svg" width="30" heigth="30" alt="Rafael-facebook"></a>
+
+:copyright: Developed with 💜 by **[Rafael Gomes](https://rafaelgomes.netlify.app?utm_source=github&utm_medium=readme_project&utm_campaign=lp_blessbarbershop)**

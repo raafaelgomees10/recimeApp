@@ -35,8 +35,8 @@ export default function Home({ recipes }) {
       <Meta
         title="ReciMe App"
         description="Find quick and easy recipes for everyday meals. From main dishes to delicious desserts, we have something for everyone."
-        canonical={`https://rafael.recime.netlify.app`}
-        ogimage="https://ddg0cip9uom1w.cloudfront.net/blog-img/recipe-card.gif"
+        canonical={`https://recime-rafael.netlify.app`}
+        ogimage="/ogimage.webp"
       />
 
       {loading ? (
