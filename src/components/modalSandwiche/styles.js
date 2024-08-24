@@ -79,6 +79,7 @@ export const Img = styled(Image)`
   @media (max-width: 768px) {
     max-height: 45vh;
     max-width: 100%;
+    align-self: center;
   }
 `;
 

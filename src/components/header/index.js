@@ -1,8 +1,11 @@
 import React from "react";
 import * as S from "./styles";
 import Image from "next/image";
+import useMedia from "@/hooks/useMedia";
 
 const Header = () => {
+  const isMobile = useMedia("(max-width:767px)");
+
   return (
     <S.Container>
       <S.Content className="fadeLeft">
@@ -10,7 +13,7 @@ const Header = () => {
         <Image
           priority
           height={70}
-          width={180}
+          width={isMobile ? 150 : 180}
           src="/logo.svg"
           alt="Logo ReciMe"
         />

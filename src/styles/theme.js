@@ -4,6 +4,7 @@ export const theme = {
     secondary: "#2091ff",
     gray: "#c5c5c5",
     darkGray: "#7f8c8d",
+    card: "#fff",
     bg: "#fff9e9",
   },
 };

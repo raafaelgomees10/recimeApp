@@ -2,7 +2,6 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle` 
 * {
-	background-color: ${(props) => props.theme.colors.bg};
 	box-sizing: border-box;
 	color: ${(props) => props.theme.colors.primary};
 	font-family: "Poppins", sans-serif;
@@ -11,6 +10,10 @@ export const GlobalStyles = createGlobalStyle`
 	margin: 0;
 	padding: 0;
   text-decoration: none;
+}
+
+html, body{
+	background-color: ${(props) => props.theme.colors.bg};
 }
 
 .mainContainer {

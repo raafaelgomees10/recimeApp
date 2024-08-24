@@ -14,8 +14,13 @@ export const Content = styled.div`
   max-width: 1100px;
   margin: 0 auto;
   width: 100%;
+
   > p {
     font-size: 3.2rem;
     font-weight: 600;
+
+    @media (max-width: 768px) {
+      font-size: 2.8rem;
+    }
   }
 `;
