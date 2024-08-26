@@ -14,6 +14,7 @@ export const GlobalStyles = createGlobalStyle`
 
 html, body{
 	background-color: ${(props) => props.theme.colors.bg};
+  transition: all 0.25s linear;
 }
 
 .mainContainer {
@@ -28,6 +29,11 @@ html, body{
   @media (min-width: 768px) and (max-width: 1199px) {
     max-width: 735px;
   }
+}
+
+.toggleTheme{
+  background-color: transparent;
+  border: none;
 }
 
 @keyframes animeLeft {

@@ -5,6 +5,8 @@ import Meta from "@/components/meta/meta";
 import { useEffect, useState } from "react";
 import Loading from "@/components/loading/loading";
 import SandwichesList from "@/components/sandwichesList";
+import SunAnimation from "@/components/themeToggle";
+import ToggleSVG from "@/components/themeToggle";
 
 export async function getStaticProps() {
   const file = await fs.readFile(

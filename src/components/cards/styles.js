@@ -15,13 +15,14 @@ const fadeDown = keyframes`
 export const Card = styled.div`
   animation: ${fadeDown} 0.5s ease-out forwards;
   animation-delay: ${(props) => props.$delay || "0ms"};
+  background-color: ${(props) => props.theme.card};
   border: 1px solid
     ${(props) =>
       props.$isSelected
         ? props.theme.colors.secondary
         : props.theme.colors.primary};
   border-radius: 16px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: ${(props) => props.theme.shadow};
   cursor: pointer;
   opacity: 0;
   overflow: hidden;

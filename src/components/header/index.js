@@ -2,6 +2,7 @@ import React from "react";
 import * as S from "./styles";
 import Image from "next/image";
 import useMedia from "@/hooks/useMedia";
+import ToggleTheme from "../themeToggle";
 
 const Header = () => {
   const isMobile = useMedia("(max-width:767px)");
@@ -9,7 +10,11 @@ const Header = () => {
   return (
     <S.Container>
       <S.Content className="fadeLeft">
-        <p>Recipes</p>
+        <S.Text>
+          <p>Recipes</p>
+          <ToggleTheme />
+        </S.Text>
+
         <Image
           priority
           height={70}

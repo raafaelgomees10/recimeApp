@@ -19,7 +19,7 @@ const Text = styled.p`
     transition: color 0.2s;
 
     &:hover {
-      color: rgb(255, 197, 49);
+      color: #ffc531;
     }
   }
 `;

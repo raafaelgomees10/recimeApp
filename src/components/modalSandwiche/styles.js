@@ -47,7 +47,7 @@ export const Container = styled.div`
 export const Modal = styled.div`
   background-color: ${(props) => props.theme.colors.bg};
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: ${(props) => props.theme.shadow};
   max-width: 90%;
   overflow: hidden;
   padding: 20px;
