@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import styled from "styled-components";
 
 const Container = styled.footer`
@@ -19,16 +20,18 @@ const Text = styled.p`
     transition: color 0.2s;
 
     &:hover {
-      color: #ffc531;
+      color: ${(props) => props.theme.colors.link};
     }
   }
 `;
 
 const Footer = () => {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode);
+
   return (
     <Container>
       <Text>
-        Developed with 💛 by{" "}
+        Developed with {isDarkMode ? "💜" : "💛"} by{" "}
         <a href="https://rafaelgomes.netlify.app?utm_source=recimeApp">
           Rafael Gomes
         </a>

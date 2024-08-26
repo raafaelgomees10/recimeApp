@@ -10,8 +10,7 @@ const themeSlice = createSlice({
   reducers: {
     setInitialTheme(state) {
       if (typeof window !== "undefined") {
-        state.isDarkMode =
-          localStorage.getItem("recime:isDarkMode") === "true" ? true : false;
+        state.isDarkMode = localStorage.getItem("recime:isDarkMode") === "true";
       }
     },
     toggleTheme(state) {
