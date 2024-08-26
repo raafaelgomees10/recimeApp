@@ -12,7 +12,7 @@ This project is a web application built with Next.js to display a list of trendi
 
 You can view the application through this link - [deploy ReciMe Test by Rafael](https://recime-rafael.netlify.app)
 
-## :technologist: Features
+## :memo: Features
 
 - **Animated Loading Screen:** Before rendering the components, an animated loading screen is displayed to improve the visual appeal of the application.
 
@@ -29,6 +29,15 @@ You can view the application through this link - [deploy ReciMe Test by Rafael](
 - **Sorting and Filtering:** Users can sort the recipe list by difficulty and by priority. The selected difficulty is stored in local storage, allowing the application to remember the user's last chosen setting on subsequent visits.
 
 - **Recipe Modal:** A modal with detailed information about each recipe is available, providing users with more context on their chosen dishes.
+
+- **Theme Switching:** Added a feature to toggle between light and dark themes using Redux for state management. Users can switch themes, and their preference is saved in local storage for a persistent experience.
+
+## :technologist: Technologies Used
+
+- Next.js
+- React
+- Redux
+- styled-components
 
 ## Installation and Setup
 
